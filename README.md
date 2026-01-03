@@ -1,66 +1,52 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
-
 <p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+  <a href="https://github.com/VDProductions/Cuadernillo-Online" target="_blank">
+    <img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo">
+  </a>
 </p>
 
-## About Laravel
+<p align="center">
+<img src="https://img.shields.io/badge/Laravel-12-FF2D20?style=flat-square&logo=laravel" alt="Laravel Version">
+<img src="https://img.shields.io/badge/Livewire-3-FB70A9?style=flat-square&logo=livewire" alt="Livewire">
+<img src="https://img.shields.io/badge/TailwindCSS-3.0-38B2AC?style=flat-square&logo=tailwind-css" alt="Tailwind CSS">
+</p>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Sobre Cuadernillo Online
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+**Cuadernillo Online** es una solución integral para la digitalización del seguimiento de las prácticas de **Formación en Centros de Trabajo (FCT)**. Desarrollada como proyecto final del ciclo **DAM**, esta plataforma web reemplaza el uso ineficiente de papel y archivos desestructurados por un entorno centralizado, moderno y reactivo.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+La aplicación optimiza la experiencia educativa mediante:
 
-## Learning Laravel
+- **Interfaz TALL Stack:** Una experiencia de usuario fluida y reactiva sin recargas de página gracias a Livewire y Alpine.js.
+- **Gestión de Roles Dinámica:** Paneles personalizados para alumnos y profesores con permisos restringidos mediante middleware.
+- **Automatización de Informes:** Generación instantánea de documentos PDF oficiales con el historial de prácticas.
+- **Analítica de Progreso:** Estadísticas mensuales y semanales que permiten al profesorado evaluar el desempeño en tiempo real.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## ¿Por qué Cuadernillo Online?
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+En el contexto actual de la Formación Profesional, el seguimiento manual genera retrasos, extravíos y falta de trazabilidad. Este proyecto nace con la motivación de aplicar conocimientos avanzados de desarrollo full-stack para resolver un problema real del entorno educativo.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### Beneficios Clave
+* **Sostenibilidad**: Eliminación total del soporte en papel.
+* **Eficiencia**: Reducción drástica de la carga administrativa para el profesorado.
+* **Accesibilidad**: Diseño responsive para uso en ordenadores, tablets y móviles.
 
-## Laravel Sponsors
+## Arquitectura del Proyecto
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+El sistema sigue un patrón **MVC adaptado**. Los componentes Livewire actúan como puente directo entre el modelo y la vista, simplificando la lógica y mejorando el mantenimiento.
 
-### Premium Partners
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
 
-## Contributing
+- **Modelos (Eloquent)**: Gestión eficiente de relaciones entre Usuarios, Grupos, Empresas y Prácticas.
+- **Vistas (Blade)**: Interfaces modulares y modernas utilizando Tailwind CSS.
+- **Seguridad**: Autenticación robusta con Laravel Breeze y validación estricta de formularios.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## Instalación
 
-## Code of Conduct
+Para ejecutar este proyecto en tu entorno local:
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+1. Clona el repositorio: `git clone https://github.com/VDProductions/Cuadernillo-Online.git`
+2. Instala dependencias PHP: `composer install`.
+3. Instala dependencias Frontend: `npm install && npm run dev`.
+4. Configura tu `.env` (DB_DATABASE, DB_USERNAME, etc.).
+5. Genera la App Key: `php artisan key:generate`.
+6. Migra la base de datos: `php artisan migrate`.
