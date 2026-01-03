@@ -1,50 +1,51 @@
-# Welcome to your Expo app 👋
+<p align="center">
+  <a href="https://reactnative.dev" target="_blank">
+    <img src="https://reactnative.dev/img/header_logo.svg" width="150" alt="React Native Logo">
+  </a>
+</p>
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+<p align="center">
+  <img src="https://img.shields.io/badge/React_Native-Expo-4630EB?style=for-the-badge&logo=react" alt="React Native Expo">
+  <img src="https://img.shields.io/badge/Axios-API_REST-5A29E4?style=for-the-badge&logo=axios" alt="Axios">
+  <img src="https://img.shields.io/badge/TypeScript-Ready-3178C6?style=for-the-badge&logo=typescript" alt="TypeScript">
+</p>
 
-## Get started
+## Sobre Cuadernillo Online (Mobile App)
 
-1. Install dependencies
+Esta es la adaptación móvil oficial del proyecto **Cuadernillo Online**. Mientras que la versión web ofrece una gestión administrativa profunda, la App móvil está diseñada para la **inmediatez**, permitiendo a los alumnos registrar sus prácticas y a los profesores supervisar el progreso desde cualquier lugar.
 
-   ```bash
-   npm install
-   ```
+La aplicación actúa como un cliente móvil que consume una **API personalizada** construida sobre el backend de Laravel, garantizando que la información esté siempre sincronizada y segura.
 
-2. Start the app
+## 📱 Características Móviles
 
-   ```bash
-   npx expo start
-   ```
+- **Movilidad Total:** Registro de actividades diarias directamente desde el centro de trabajo sin necesidad de un ordenador.
+- **Sincronización API REST:** Comunicación fluida con el servidor mediante Axios, manejando autenticación basada en tokens.
+- **Interfaz Nativa:** Componentes optimizados para iOS y Android que ofrecen una experiencia de usuario rápida y fluida.
+- **Persistencia de Sesión:** Uso de `AsyncStorage` para mantener la sesión del usuario activa de forma segura.
 
-In the output, you'll find options to open the app in a
+## 🛠️ Stack Tecnológico
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+- **Framework:** [React Native](https://reactnative.dev/) con **Expo**.
+- **Navegación:** [Expo Router](https://docs.expo.dev/router/introduction/) (Basado en archivos para una navegación tipo Next.js).
+- **Cliente HTTP:** [Axios](https://axios-http.com/) para el consumo de la API REST.
+- **Backend:** API REST construida en Laravel (Repositorio principal).
+- **Estilos:** Flexbox y StyleSheet nativo siguiendo el `theme.ts` del proyecto.
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## 🚀 Configuración del Entorno
 
-## Get a fresh project
+Para conectar la App con tu servidor local, asegúrate de configurar la IP correcta en tu cliente API:
 
-When you're ready, run:
+1. Clona el repositorio y entra en la rama móvil: git clone `git clone https://github.com/VDProductions/Cuadernillo-Online.git`
+2. Instala las dependencias: `npm instal`
+3. Configura la URL de la API (en tu archivo de configuración de Axios):
+   - Emulador Android: `http://10.0.2.2:8000/api`
+   - Dispositivo Físico: `http://TU_IP_LOCAL:8000/api`
+4. Inicia el proyecto: `npx expo start -a`
 
-```bash
-npm run reset-project
-```
+## 📐 Flujo de Datos (API)
+La aplicación móvil se comunica con el backend mediante los siguientes endpoints principales:
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+- POST /api/login: Autenticación y obtención de token de acceso.
+- GET /api/practicas: Obtención del historial de registros del alumno.
+- POST /api/practicas: Creación de nuevos registros diarios.
+- GET /api/user: Perfil y datos del grupo asignado.
